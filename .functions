@@ -1,0 +1,11 @@
+function commit () {
+    git add . && git commit -m "$1" && git push
+}
+
+function nbranch () {
+    git checkout -b "$1" && git push --set-upstream origin "$1"
+}
+
+function opull () {
+    git pull origin "$1" && git push
+}
